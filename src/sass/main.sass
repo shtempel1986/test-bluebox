@@ -1,0 +1,258 @@
+@font-face
+  font-family: "PT SAns"
+  src: url(../fonts/PT_Sans-Web-Regular.ttf)
+  font-weight: normal
+@font-face
+  font-family: "PT SAns"
+  src: url(../fonts/PT_Sans-Web-Bold.ttf)
+  font-weight: bold
+*
+  font: 400 15px "PT SAns", sans-serif
+header
+  padding: 25px 0 40px
+h1
+  font-weight: bold
+  padding: 0 0 0 55px
+  position: relative
+  display: inline-block
+  font-size: 35px
+  img
+    position: absolute
+    left: 0
+h2
+  font-size: 30px
+.header-nav
+  display: inline-block
+  float: right
+  ul
+    margin: 0
+  li
+    line-height: 35px
+    vertical-align: middle
+.header-nav__link
+  color: #000
+  padding: 0 23px
+  border-right: solid #acacac 2px
+  &:hover
+    text-decoration: none
+    color: lightblue
+li:last-child .header-nav__link
+  border: none
+main
+  color: #626262
+.main-banner
+  background: linear-gradient(to bottom, #31333e 0, #31333e 91%, #fff 91%)
+  color: #fff
+  margin: 0 0 50px
+  h2
+    font-size: 45px
+    padding: 65px 0 75px
+.main-banner__button
+  background: #00aeff
+  padding: 13px 50px
+  color: #fff
+  margin: 0 15px
+.main-banner-slider
+  position: relative
+.main-banner__controls
+  position: absolute
+  top: 80px
+  background: transparent
+  color: #696d7d
+  font-size: 70px
+  border: none
+  &-next
+    right: 0
+  &-prev
+    left: 0
+.features
+  margin: 0 auto 70px
+  h3
+    font-size: 30px
+    margin: 0 0 25px
+  p
+    padding: 30px 30px 0
+  a
+    font-weight: bold
+    color: #00aeff
+.our-works
+  background: #e2e7ed
+  padding: 45px 0 90px
+.works-container
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin: 30px 0
+.works-item
+  position: relative
+  width: 275px
+  height: 200px
+  overflow: hidden
+  img
+    position: absolute
+    left: -90px
+    top: -40px
+  &__hover
+    position: absolute
+    top: 0
+    left: 0
+    width: 275px
+    height: 200px
+    padding: 15px
+    background: #00aeff
+    z-index: -1
+    color: #fff
+    h3
+      font-size: 24px
+      font-weight: bold
+.works-item:hover .works-item__hover
+  z-index: 1
+.works-item__button, .works-item__link
+  display: inline-block
+  position: absolute
+  bottom: 0
+  width: 70px
+  height: 40px
+  background: #008bcc
+  color: #fff
+  font-size: 30px
+.works-item__button
+  left: 0
+  border: none
+  cursor: pointer
+  &:hover
+    color: darkblue
+.works-item__link
+  text-align: center
+  right: 0
+.clients
+  padding: 35px 15px 75px
+  overflow: hidden
+  position: relative
+  h2
+    margin: 0 0 40px
+
+.clients__controls
+  position: absolute
+  border: none
+  font-size: 50px
+  color: #ced4db
+  background: transparent
+  top: 100px
+  &-next
+    right: 0
+.clients-slider
+  padding: 0 30px
+.clients__logo
+  position: relative
+  display: inline-block
+  margin: 0 30px
+  overflow: hidden
+  height: 55px
+  img
+    position: absolute
+.clients__logo-cnn
+  width: 120px
+  margin: 0 30px 0 60px
+.clients__logo-fuji
+  width: 220px
+  img
+    left: -170px
+.clients__logo-casio
+  width: 200px
+  img
+    left: -420px
+.clients__logo-apartment
+  width: 220px
+  img
+    left: -630px
+footer
+  background: #31333e
+  color: #ffffff
+  padding: 40px 0 65px
+.footer__right
+  display: inline-block
+.footer-nav
+  display: inline-block
+  ul
+    margin: 0
+    .list-inline-item
+      margin: 0
+      a
+        padding: 0 15px
+        color: #ffffff
+    .list-inline-item:first-child a
+      padding: 0 15px 0 0
+    .list-inline-item:not(:last-child) a
+      border-right: solid #ffffff 2px
+.footer-socials-links
+  display: inline-block
+  float: right
+  width: 267px
+.footer-social__link
+  display: inline-block
+  width: 37px
+  height: 36px
+  overflow: hidden
+  position: relative
+  img
+    position: absolute
+    left: 0
+  &-linkedin img
+    left: -47px
+  &-twitter img
+    left: -95px
+  &-pinterest img
+    left: -143px
+  &-dribbble img
+    left: -190px
+  &-google-plus img
+    left: -237px
+.fancybox
+  position: fixed
+  top: 0
+  left: 0
+  color: #000
+  background: rgba(255,255,255,0.5)
+  font-size: 50px
+  display: none
+  text-align: center
+  box-shadow: inset 0 0  10px 10px #ffffff
+  z-index: 2
+  img
+    display: inline-block
+    box-shadow: 0 0  20px 20px #ffffff
+.fancybox__close
+  position: absolute
+  top: 15px
+  right: 15px
+  cursor: pointer
+@media all and (min-width: 768px) and (max-width: 992px)
+  .features p
+    padding: 30px 15px 0
+  .clients-slider
+    padding: 0 30px 0 70px
+    margin: 0 0 0 30px
+  .clients__logo-fuji
+    margin: 0 0 0 90px
+  .footer-socials-links
+    display: block
+    float: none
+    width: 100%
+    text-align: center
+@media all and (max-width: 768px)
+  .clients-slider
+    padding: 0 30px 0 70px
+    margin: 0 0 0 30px
+  .clients__logo-fuji
+    margin: 0 0 0 90px
+  .container
+    width: 768px
+    min-width: 768px
+  footer, main, header
+    min-width: 768px
+  .footer-socials-links
+    display: block
+    float: none
+    width: 100%
+    text-align: center
