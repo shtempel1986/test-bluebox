@@ -67,7 +67,9 @@ main {
   margin: 0 15px; }
 
 .main-banner-slider {
-  position: relative; }
+  position: relative;
+  overflow: hidden;
+  height: 400px; }
 
 .main-banner__controls {
   position: absolute;
@@ -80,6 +82,24 @@ main {
     right: 0; }
   .main-banner__controls-prev {
     left: 0; }
+
+.main-banner__item {
+  display: none;
+  position: absolute;
+  top: 0;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s; }
+  .main-banner__item.main-banner__item_active, .main-banner__item.main-banner__item_next, .main-banner__item.main-banner__item_prev {
+    display: inline-block; }
+
+.main-banner__item_active {
+  left: 0; }
+
+.main-banner__item_next {
+  left: 1170px; }
+
+.main-banner__item_prev {
+  left: -1170px; }
 
 .features {
   margin: 0 auto 70px; }

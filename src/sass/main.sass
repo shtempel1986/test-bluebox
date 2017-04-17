@@ -54,6 +54,8 @@ main
   margin: 0 15px
 .main-banner-slider
   position: relative
+  overflow: hidden
+  height: 400px
 .main-banner__controls
   position: absolute
   top: 80px
@@ -65,6 +67,19 @@ main
     right: 0
   &-prev
     left: 0
+.main-banner__item
+  display: none
+  position: absolute
+  top: 0
+  transition-duration: 0.7s
+  &.main-banner__item_active, &.main-banner__item_next,&.main-banner__item_prev
+    display: inline-block
+.main-banner__item_active
+  left: 0
+.main-banner__item_next
+  left: 1170px
+.main-banner__item_prev
+  left: -1170px
 .features
   margin: 0 auto 70px
   h3
