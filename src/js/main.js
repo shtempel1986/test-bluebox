@@ -16,16 +16,21 @@ $(document).ready(function () {
         $fancybox.css({ display: "none" });
     });
     $(".works-item__button").click(function () {
-        var imgHeight = $(this).parent().siblings("img").height();
-        $fancyImg.attr("src", $(this).parent().siblings("img").attr("src"));
-        $fancyImg.css({
-            marginTop: ($(window).height() - imgHeight) / 2
-        });
-        console.log(imgHeight);
+        var imgHeight = void 0,
+            imgWidth = void 0;
         $fancybox.css({
             width: $(window).width(),
             height: $(window).height()
-        }).fadeIn(500);
+        }).show();
+        $fancyImg.attr("src", $(this).parent().siblings("img").attr("src"));
+        imgHeight = $fancyImg.height();
+        imgWidth = $fancyImg.width();
+        $fancyImg.css({
+            marginTop: -(imgHeight / 2),
+            marginLeft: -(imgWidth / 2)
+        });
+        $fancybox.hide();
+        $fancybox.fadeIn(500);
     });
     $fancybox.click(function () {
         $fancybox.css({ display: "none" });
@@ -49,5 +54,10 @@ $(document).ready(function () {
         $(".main-banner__item_next").removeClass("main-banner__item_next");
         $bannerItems.eq(checkNumber(checkNumber(current - 1) - 1)).addClass("main-banner__item_prev");
         $bannerItems.eq(current).addClass("main-banner__item_next");
+    });
+
+    //Переключение меню для маленького размера экрана
+    $(".navbar-toggle").click(function () {
+        $(".header-nav").toggle(500);
     });
 });
